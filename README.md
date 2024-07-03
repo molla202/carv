@@ -43,9 +43,9 @@ make build
 ```
 ### Servis
 ```
-sudo tee /etc/systemd/system/tracksd.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/carvd.service > /dev/null <<EOF
 [Unit]
-Description=tracksd node
+Description=carv node
 After=network-online.target
 
 [Service]
@@ -56,14 +56,13 @@ ExecStart=/root/verifier/bin/verifier -conf /root/verifier/configs/config.yaml
 Restart=always
 RestartSec=10
 LimitNOFILE=65535
-SuccessExitStatus=0 1
 [Install]
 WantedBy=multi-user.target
 EOF
 ```
 ```
 sudo systemctl daemon-reload
-sudo systemctl enable tracksd
+sudo systemctl enable carvd
 ```
 ### Config dosyası güncelleme
 NOT: private key yazıyorsunuz - reward adresini yazıyorsunuz - komisyonu yazıyorsunuz. ( anladığım kadarı ile bidane private keye ihtiyacınız var mm olusutup alın)
@@ -100,11 +99,11 @@ dacp:
 
 ### Başlatalım
 ```
-sudo systemctl restart tracksd
+sudo systemctl restart carvd
 ```
 ### loglara bakalım
 ```
-sudo journalctl -u tracksd -fo cat
+sudo journalctl -u carvd -fo cat
 ```
 
 
