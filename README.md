@@ -34,14 +34,14 @@ source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
 
-
+### Dosyaları çekelim
 ```
 git clone https://github.com/carv-protocol/verifier.git && \
 cd verifier && \
 git checkout verifier-alphanet && \
 make build
 ```
-
+### Servis
 ```
 sudo tee /etc/systemd/system/tracksd.service > /dev/null <<EOF
 [Unit]
