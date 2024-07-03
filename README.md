@@ -87,7 +87,7 @@ contract:
   tee_addr : "0x7f57004E08ef1702b2b88b87ae01a561ae10F10e"
   topic: "0x99a038e9d345d0b12130b3b1fb003bf8f2d3a5c27ce2a800bbb1608efff6c591"
 wallet:
-  mode: 0
+  mode: 1
   private_key: ""
   reward_claimer_addr: ""
   commission_rate: ""
